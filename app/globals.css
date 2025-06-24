@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* VS Code specific styles with authentic colors and fonts */
+.vscode-theme {
+  font-family: "JetBrains Mono", "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* VS Code Color Variables */
+:root {
+  /* Editor Colors */
+  --vscode-editor-background: #1e1e1e;
+  --vscode-editor-foreground: #d4d4d4;
+  --vscode-editor-selection-background: #264f78;
+
+  /* Activity Bar */
+  --vscode-activityBar-background: #333333;
+  --vscode-activityBar-foreground: #ffffff;
+  --vscode-activityBar-activeBorder: #007acc;
+
+  /* Side Bar */
+  --vscode-sideBar-background: #252526;
+  --vscode-sideBar-foreground: #cccccc;
+  --vscode-sideBar-border: #2d2d30;
+
+  /* Title Bar */
+  --vscode-titleBar-activeBackground: #3c3c3c;
+  --vscode-titleBar-activeForeground: #cccccc;
+  --vscode-titleBar-inactiveBackground: #2d2d30;
+
+  /* Menu Bar */
+  --vscode-menubar-selectionBackground: #ffffff1a;
+  --vscode-menubar-selectionForeground: #cccccc;
+
+  /* Tabs */
+  --vscode-tab-activeBackground: #1e1e1e;
+  --vscode-tab-activeForeground: #ffffff;
+  --vscode-tab-inactiveBackground: #2d2d30;
+  --vscode-tab-inactiveForeground: #969696;
+  --vscode-tab-border: #252526;
+
+  /* Terminal */
+  --vscode-terminal-background: #1e1e1e;
+  --vscode-terminal-foreground: #d4d4d4;
+  --vscode-terminal-ansiBlue: #569cd6;
+  --vscode-terminal-ansiGreen: #4ec9b0;
+  --vscode-terminal-ansiYellow: #dcdcaa;
+  --vscode-terminal-ansiRed: #f44747;
+  --vscode-terminal-ansiMagenta: #c586c0;
+  --vscode-terminal-ansiCyan: #4fc1ff;
+
+  /* Input */
+  --vscode-input-background: #3c3c3c;
+  --vscode-input-foreground: #cccccc;
+  --vscode-input-border: #464647;
+  --vscode-inputOption-activeBorder: #007acc;
+
+  /* Button */
+  --vscode-button-background: #0e639c;
+  --vscode-button-foreground: #ffffff;
+  --vscode-button-hoverBackground: #1177bb;
+
+  /* List */
+  --vscode-list-activeSelectionBackground: #094771;
+  --vscode-list-hoverBackground: #2a2d2e;
+  --vscode-list-focusBackground: #062f4a;
+
+  /* Syntax Highlighting */
+  --vscode-syntax-keyword: #569cd6;
+  --vscode-syntax-string: #ce9178;
+  --vscode-syntax-comment: #6a9955;
+  --vscode-syntax-number: #b5cea8;
+  --vscode-syntax-function: #dcdcaa;
+  --vscode-syntax-type: #4ec9b0;
+  --vscode-syntax-variable: #9cdcfe;
+}
+
+/* Custom scrollbar for VS Code theme */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vscode-editor-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 0;
+  border: 3px solid var(--vscode-editor-background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f4f4f;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--vscode-editor-background);
+}
+
+/* Terminal cursor animation */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Smooth transitions for VS Code theme */
+.transition-colors {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* VS Code specific component styles */
+.vscode-titlebar {
+  background: var(--vscode-titleBar-activeBackground);
+  color: var(--vscode-titleBar-activeForeground);
+  font-size: 12px;
+}
+
+.vscode-menubar {
+  background: var(--vscode-titleBar-inactiveBackground);
+  color: var(--vscode-titleBar-activeForeground);
+  font-size: 13px;
+}
+
+.vscode-menubar-item:hover {
+  background: var(--vscode-menubar-selectionBackground);
+  color: var(--vscode-menubar-selectionForeground);
+}
+
+.vscode-sidebar {
+  background: var(--vscode-sideBar-background);
+  color: var(--vscode-sideBar-foreground);
+  border-right: 1px solid var(--vscode-sideBar-border);
+}
+
+.vscode-tab-active {
+  background: var(--vscode-tab-activeBackground);
+  color: var(--vscode-tab-activeForeground);
+  border-bottom: 1px solid var(--vscode-tab-activeBackground);
+}
+
+.vscode-tab-inactive {
+  background: var(--vscode-tab-inactiveBackground);
+  color: var(--vscode-tab-inactiveForeground);
+}
+
+.vscode-editor {
+  background: var(--vscode-editor-background);
+  color: var(--vscode-editor-foreground);
+}
+
+.vscode-terminal {
+  background: var(--vscode-terminal-background);
+  color: var(--vscode-terminal-foreground);
+  font-family: "JetBrains Mono", "Consolas", "Monaco", "Courier New", monospace;
+}
+
+.vscode-input {
+  background: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border);
+  font-family: "JetBrains Mono", "Consolas", "Monaco", "Courier New", monospace;
+}
+
+.vscode-input:focus {
+  border-color: var(--vscode-inputOption-activeBorder);
+  outline: none;
+}
+
+.vscode-list-item:hover {
+  background: var(--vscode-list-hoverBackground);
+}
+
+.vscode-list-item:focus {
+  background: var(--vscode-list-focusBackground);
+}
+
+/* Syntax highlighting classes */
+.syntax-keyword {
+  color: var(--vscode-syntax-keyword);
+}
+
+.syntax-string {
+  color: var(--vscode-syntax-string);
+}
+
+.syntax-comment {
+  color: var(--vscode-syntax-comment);
+}
+
+.syntax-number {
+  color: var(--vscode-syntax-number);
+}
+
+.syntax-function {
+  color: var(--vscode-syntax-function);
+}
+
+.syntax-type {
+  color: var(--vscode-syntax-type);
+}
+
+.syntax-variable {
+  color: var(--vscode-syntax-variable);
+}
